@@ -1,0 +1,76 @@
+require 'fastlane-qyer'
+
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version '1.82.0'
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    cocoapods
+  end
+
+  desc '初始化项目'
+  desc '没有用户权限者执行只读模式'
+  desc 'fastlane bootstrap readonly:true'
+  lane :bootstrap do |options|
+    say 'default decrypted certificates password: `qyer`'
+    match(
+      type: 'adhoc',
+      readonly: options[:readonly],
+      force_for_new_devices: !options[:readonly]
+    )
+  end
+
+
+  desc 'Submit a new Beta Build to Apple TestFlight'
+  desc 'This will also make sure the profile is up to date'
+  lane :beta do
+    # match(type: 'appstore') # more information: https://codesigning.guide
+    gym(scheme: 'QYAppUpdate_Example') # Build your app - more options available
+    qyer(
+      api_key: '75f4d21a3d4efbd9ba9217eb6989a35b',
+      channel: 'fastlane',
+      ipa: ipa
+    )
+
+    # sh 'your_script.sh'
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: 'Successfully deployed new App Update.'
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

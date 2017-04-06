@@ -1,0 +1,11 @@
+source 'http://git.2b6.me/Cocoapods/Specs.git'
+
+platform :ios, ‘8.0’
+
+#use_frameworks!
+
+target 'QYAppUpdate_Example' do
+
+  pod "QYAppUpdate", :path => "../"
+  
+end

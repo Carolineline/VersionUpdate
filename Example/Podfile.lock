@@ -1,0 +1,109 @@
+PODS:
+  - AFDownloadRequestOperation (2.0.1):
+    - AFNetworking (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Masonry (1.0.2)
+  - QYAppUpdate (0.1.12):
+    - Masonry (~> 1.0.2)
+    - QYRequest (~> 0.2.2)
+    - QYUIKit (~> 0.1.8.2)
+  - QYCategory/NSObject+Swizzle (0.3.3)
+  - QYRequest (0.2.3.1):
+    - AFNetworking (~> 2.6.3)
+    - ReactiveCocoa (~> 2.5)
+    - YTKNetwork (~> 1.3.0)
+  - QYUIKit (0.1.8.4):
+    - QYUIKit/Category (= 0.1.8.4)
+    - QYUIKit/View (= 0.1.8.4)
+  - QYUIKit/Category (0.1.8.4):
+    - QYUIKit/Category/UIBotton+EdgeInsets (= 0.1.8.4)
+    - QYUIKit/Category/UICollectionView+QYTemplateLayoutCell (= 0.1.8.4)
+    - QYUIKit/Category/UIColor+ColorHexString (= 0.1.8.4)
+    - QYUIKit/Category/UIFont+Fit (= 0.1.8.4)
+    - QYUIKit/Category/UIImage+Category (= 0.1.8.4)
+    - QYUIKit/Category/UILabel+StringFrame (= 0.1.8.4)
+    - QYUIKit/Category/UIView+EmptyDataSet (= 0.1.8.4)
+    - QYUIKit/Category/UIView+Positioning (= 0.1.8.4)
+    - QYUIKit/Category/UIViewController+Base (= 0.1.8.4)
+  - QYUIKit/Category/UIBotton+EdgeInsets (0.1.8.4)
+  - QYUIKit/Category/UICollectionView+QYTemplateLayoutCell (0.1.8.4):
+    - QYCategory/NSObject+Swizzle
+  - QYUIKit/Category/UIColor+ColorHexString (0.1.8.4)
+  - QYUIKit/Category/UIFont+Fit (0.1.8.4):
+    - QYCategory/NSObject+Swizzle
+  - QYUIKit/Category/UIImage+Category (0.1.8.4)
+  - QYUIKit/Category/UILabel+StringFrame (0.1.8.4):
+    - QYUIKit/Category/UIView+Positioning
+  - QYUIKit/Category/UIView+EmptyDataSet (0.1.8.4):
+    - QYCategory/NSObject+Swizzle
+  - QYUIKit/Category/UIView+Positioning (0.1.8.4)
+  - QYUIKit/Category/UIViewController+Base (0.1.8.4):
+    - QYCategory/NSObject+Swizzle
+  - QYUIKit/View (0.1.8.4):
+    - QYUIKit/View/QYAlertView (= 0.1.8.4)
+    - QYUIKit/View/QYWebView (= 0.1.8.4)
+  - QYUIKit/View/QYAlertView (0.1.8.4):
+    - Masonry
+    - QYUIKit/Category/UIView+Positioning
+    - ReactiveCocoa (~> 2.5)
+  - QYUIKit/View/QYWebView (0.1.8.4):
+    - Masonry
+    - QYCategory/NSObject+Swizzle
+    - ReactiveCocoa (~> 2.5)
+    - SDWebImage
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - YTKNetwork (1.3.0):
+    - AFDownloadRequestOperation (~> 2.0)
+    - AFNetworking (~> 2.0)
+
+DEPENDENCIES:
+  - QYAppUpdate (from `../`)
+
+EXTERNAL SOURCES:
+  QYAppUpdate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFDownloadRequestOperation: 8c0f7f32a95669a860adc06646f931735ca8282b
+  AFNetworking: b0cb3c689cd98b253542a290927f62c15dfa8064
+  Masonry: 2c6c235de474dafa212009c49845abcf58a30716
+  QYAppUpdate: b254272244fa8eab912b562fc15023d5f34833af
+  QYCategory: 6876ba9926da121b619d660d22ad7ee8261c7003
+  QYRequest: 389e4c769a6cb0b887e9677878a1b2c55267dd95
+  QYUIKit: 25619e9237e58c0bbe8fcc21b2fc66977a74bb5a
+  ReactiveCocoa: 97974520a1b916cb2514b45b16eccc21cb70d38f
+  SDWebImage: 221d06d56654565f99d8d1e901e0f028c2133775
+  YTKNetwork: 727612fc039a82f11140b258cbe274afd1de8b06
+
+PODFILE CHECKSUM: 94002f82797ca812856980498f5fbde3cf2f04c4
+
+COCOAPODS: 1.2.0.rc.1
